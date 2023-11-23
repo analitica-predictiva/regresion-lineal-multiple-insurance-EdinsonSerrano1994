@@ -88,7 +88,7 @@ def pregunta_03():
             # las variables.
             (
                 "column_transfomer",
-                make_column_transformer(
+                    make_column_transformer(
                     (
                         OneHotEncoder(),
                         make_column_selector(dtype_include=object),
@@ -115,7 +115,8 @@ def pregunta_03():
 
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
-    param_grid = {"selectKbest__k": range(1,12),
+    param_grid = {
+        "selectKBest__k": range(1,12),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
